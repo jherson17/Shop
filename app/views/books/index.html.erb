@@ -3,7 +3,11 @@
 <h1>Books</h1>
 
 <div id="books">
+
   <% @books.each do |book| %>
+    <% if book.foto.attached? %>
+      <image src="<%= url_for(book.foto) %>" height=100>
+    <% end %>
     <%= render book %>
     <p>
       <%= link_to "Show this book", book %>
