@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_07_223112) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_222050) do
   create_table "books", force: :cascade do |t|
     t.string "name"
     t.decimal "precio"
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_223112) do
     t.integer "cantidad_de_paginas"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
 end
