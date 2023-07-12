@@ -3,7 +3,14 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
+    #agragando categoria
+    #y ordenandolo
+    @categories = Category.all.order(name: :asc).load_async
     @books = Book.all
+    #estoy diciendo si es cierto id muestramelo en _category.html.erb
+    if params[:category_id]
+      @books = @books.where(category_id: params[:category_id])
+    end
   end
 
   # GET /books/1 or /books/1.json
