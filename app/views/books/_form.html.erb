@@ -26,15 +26,23 @@
     <%= form.text_field :autor %>
   </div>
 
-  <div>
+   <div>
     <%= form.label :genero, style: "display: block" %>
     <%= form.text_field :genero %>
   </div>
 
+  <p>
+   <div>
+    <%# elmine el genero ya que tenemos este %>
+    <%# selector dexplegable, envia un category id a la peticion, y se rellenera de todas las categorias poner el id y el nombre %>
+    <%= form.label :category_id%>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name%>
+   </div>
+    <p>
   <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
-  </div>
+
 
   <div>
     <%= form.label :cantidad_de_paginas, style: "display: block" %>

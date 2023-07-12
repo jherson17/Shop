@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Books</h1>
-
+<%= link_to t('.all'), books_path%>
+<%= render partial: 'category', collection: @categories%>
 <div id="books">
 
   <% @books.each do |book| %>
@@ -14,5 +15,6 @@
     </p>
   <% end %>
 </div>
+
 
 <%= link_to "New book", new_book_path %>
