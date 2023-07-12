@@ -1,14 +1,9 @@
 <p style="color: green"><%= notice %></p>
-
+<%# elimine los show ya que no son necesarios %>
 <h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
-</div>
+<%# gracias al rende partial conllection nos envia en forma de variable local el @categories %>
+<%= render partial: 'category', collection: @categories%>
+<%# elimine tambien el boton de show y solo esta este render%>
 
 <%= link_to "New category", new_category_path %>
+<p><%= link_to t('common.back'), categories_path%></p>
