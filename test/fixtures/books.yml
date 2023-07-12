@@ -1,15 +1,18 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+narnia:
+  name: narnia
   precio: 9.99
-  autor: MyString
-  genero: MyString
+  autor: harry
+  genero: accion y aventura
   cantidad_de_paginas: 1
+  category: accion_y_aventura
 
-two:
-  name: MyString
+romeo:
+  name: romeo y julieta
   precio: 9.99
-  autor: MyString
-  genero: MyString
+  autor: aaa
+  genero: romance
   cantidad_de_paginas: 1
+  category: romance
+
