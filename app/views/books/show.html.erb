@@ -1,5 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
+<% if @book.foto.attached? %>
+  <image src="<%= url_for(@book.foto) %>" height=100>
+<% end %>
+
 <%= render @book %>
 
 <div>

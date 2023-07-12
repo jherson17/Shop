@@ -32,10 +32,19 @@
   </div>
 
   <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
     <%= form.label :cantidad_de_paginas, style: "display: block" %>
     <%= form.number_field :cantidad_de_paginas %>
   </div>
 
+   <div>
+    <%= form.label :foto, style: "display: block" %>
+    <%= form.file_field :foto %>
+  </div>
   <div>
     <%= form.submit %>
   </div>
